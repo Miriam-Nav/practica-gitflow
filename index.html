@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Curso de JavaScript</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      width: 800px;
+      border: 1px solid black;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 1px solid black;
+    }
+    nav {
+      display: flex;
+      border-bottom: 1px solid black;
+    }
+    nav div {
+      flex: 1;
+      text-align: center;
+      padding: 15px 5px;
+      border-right: 1px solid black;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    nav div:last-child {
+      border-right: none;
+    }
+    main {
+      min-height: 500px;
+      padding: 30px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- CABECERA -->
+    <header>
+      Cabecera de la página con el nombre del curso y una imágen de fondo.
+    </header>
+
+    <!-- MENÚ -->
+    <nav>
+      <div>Home</div>
+      <div>Modificar contenido<br>HTML</div>
+      <div>Modificar estilos CSS</div>
+      <div>Modificar atributos HTML</div>
+    </nav>
+
+    <!-- CONTENIDO CENTRAL CON DESCRIPCIÓN -->
+    <main>
+      <h2>Bienvenido/a al curso de JavaScript</h2>
+      <p>En este curso aprenderemos cómo utilizar JavaScript aplicado a interacciones con elementos HTML. Veremos diferentes ejemplos prácticos para modificar el contenido, los estilos y los atributos de nuestra página web de manera dinámica.</p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      Footer del sitio
+    </footer>
+  </div>
+
+</body>
+</html>
