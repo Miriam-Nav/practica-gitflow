@@ -86,6 +86,22 @@
         <p>Al hacer clic en el botón, el evento <code>onclick</code> busca el elemento con <code>id="demo"</code> usando <code>document.getElementById()</code> y reemplaza su contenido con <code>innerHTML</code>.</p>
       </section>
 
+      <!-- USUARIO 2: Modificar atributos HTML -->
+      <section id="modificar-atributos">
+        <hr>
+        <h2>Modificar atributos HTML</h2>
+        <p>Ejemplo de cómo cambiar un atributo de un elemento usando JavaScript:</p>
+
+        <input type="text" id="campo-texto" value="Valor original" readonly>
+        <br><br>
+        <button onclick="document.getElementById('campo-texto').setAttribute('value', '¡Atributo modificado!')">
+          Cambiar atributo 'value'
+        </button>
+
+        <h3>Explicación del código:</h3>
+        <p>Al hacer clic en el botón, se utiliza <code>document.getElementById()</code> para seleccionar el campo de texto y el método <code>setAttribute()</code> para modificar su atributo <code>value</code> dinámicamente.</p>
+      </section>
+
     </main>
 
     <!-- FOOTER -->
