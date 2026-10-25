@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Curso de JavaScript</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      width: 800px;
+      border: 1px solid black;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 1px solid black;
+    }
+    nav {
+      display: flex;
+      border-bottom: 1px solid black;
+    }
+    nav div {
+      flex: 1;
+      text-align: center;
+      padding: 15px 5px;
+      border-right: 1px solid black;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    nav div:last-child {
+      border-right: none;
+    }
+    main {
+      min-height: 500px;
+      padding: 30px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- CABECERA -->
+    <header>
+      Cabecera de la página con el nombre del curso y una imágen de fondo.
+    </header>
+
+    <!-- MENÚ -->
+    <nav>
+      <div>Home</div>
+      <div>Modificar contenido<br>HTML</div>
+      <div>Modificar estilos CSS</div>
+      <div>Modificar atributos HTML</div>
+    </nav>
+
+    <!-- CONTENIDO CENTRAL -->
+    <main>
+      <h2>Bienvenido/a al curso de JavaScript</h2>
+      <p>En este curso aprenderemos cómo utilizar JavaScript aplicado a interacciones con elementos HTML. Veremos diferentes ejemplos prácticos para modificar el contenido, los estilos y los atributos de nuestra página web de manera dinámica.</p>
+      
+      <hr>
+
+      <!-- USUARIO 2: Modificar contenido HTML -->
+      <section id="modificar-contenido">
+        <h2>Modificar contenido HTML</h2>
+        <p>Ejemplo de cómo cambiar el contenido de un elemento usando JavaScript:</p>
+        
+        <p id="demo">Este es el texto original.</p>
+        <button onclick="document.getElementById('demo').innerHTML = '¡El texto ha sido modificado por JavaScript!'">
+          Cambiar texto
+        </button>
+
+        <h3>Explicación del código:</h3>
+        <p>Al hacer clic en el botón, el evento <code>onclick</code> busca el elemento con <code>id="demo"</code> usando <code>document.getElementById()</code> y reemplaza su contenido con <code>innerHTML</code>.</p>
+      </section>
+
+      <!-- USUARIO 2: Modificar atributos HTML -->
+      <section id="modificar-atributos">
+        <hr>
+        <h2>Modificar atributos HTML</h2>
+        <p>Ejemplo de cómo cambiar un atributo de un elemento usando JavaScript:</p>
+
+        <input type="text" id="campo-texto" value="Valor original" readonly>
+        <br><br>
+        <button onclick="document.getElementById('campo-texto').setAttribute('value', '¡Atributo modificado!')">
+          Cambiar atributo 'value'
+        </button>
+
+        <h3>Explicación del código:</h3>
+        <p>Al hacer clic en el botón, se utiliza <code>document.getElementById()</code> para seleccionar el campo de texto y el método <code>setAttribute()</code> para modificar su atributo <code>value</code> dinámicamente.</p>
+      </section>
+
+      <!-- USUARIO 3: Modificar estilos CSS -->
+      <section id="modificar-estilos">
+        <hr>
+        <h2>Modificar estilos CSS</h2>
+        <p>Ejemplo de cómo cambiar el estilo visual de un elemento usando JavaScript:</p>
+
+        <p id="texto-estilo">JavaScript puede cambiar el estilo de un elemento HTML.</p>
+        <button type="button" onclick="document.getElementById('texto-estilo').style.fontSize='35px'">
+          ¡Haz clic aquí!
+        </button>
+
+        <h3>Explicación del código:</h3>
+        <p>Al pulsar el botón, el evento <code>onclick</code> selecciona el párrafo mediante <code>document.getElementById()</code> y modifica su propiedad <code>style.fontSize</code> para aumentar el tamaño de la letra a 35px.</p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      Footer del sitio
+    </footer>
+  </div>
+
+</body>
+</html>
