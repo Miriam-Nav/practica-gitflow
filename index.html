@@ -65,10 +65,27 @@
       <div>Modificar atributos HTML</div>
     </nav>
 
-    <!-- CONTENIDO CENTRAL CON DESCRIPCIÓN -->
+    <!-- CONTENIDO CENTRAL -->
     <main>
       <h2>Bienvenido/a al curso de JavaScript</h2>
       <p>En este curso aprenderemos cómo utilizar JavaScript aplicado a interacciones con elementos HTML. Veremos diferentes ejemplos prácticos para modificar el contenido, los estilos y los atributos de nuestra página web de manera dinámica.</p>
+      
+      <hr>
+
+      <!-- USUARIO 2: Modificar contenido HTML -->
+      <section id="modificar-contenido">
+        <h2>Modificar contenido HTML</h2>
+        <p>Ejemplo de cómo cambiar el contenido de un elemento usando JavaScript:</p>
+        
+        <p id="demo">Este es el texto original.</p>
+        <button onclick="document.getElementById('demo').innerHTML = '¡El texto ha sido modificado por JavaScript!'">
+          Cambiar texto
+        </button>
+
+        <h3>Explicación del código:</h3>
+        <p>Al hacer clic en el botón, el evento <code>onclick</code> busca el elemento con <code>id="demo"</code> usando <code>document.getElementById()</code> y reemplaza su contenido con <code>innerHTML</code>.</p>
+      </section>
+
     </main>
 
     <!-- FOOTER -->
