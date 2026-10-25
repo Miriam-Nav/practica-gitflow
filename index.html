@@ -34,6 +34,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+    }
+    nav div:hover {
+      background-color: #f0f0f0;
     }
     nav div:last-child {
       border-right: none;
@@ -124,6 +128,18 @@
       Footer del sitio
     </footer>
   </div>
+
+  <!-- SCRIPT DE PESTAÑAS -->
+  <script>
+    function mostrarSeccion(idSeccion) {
+      // 1. Oculta todas las secciones
+      let secciones = document.querySelectorAll('.seccion-curso');
+      secciones.forEach(sec => sec.style.display = 'none');
+      
+      // 2. Muestra solo la sección clicada
+      document.getElementById(idSeccion).style.display = 'block';
+    }
+  </script>
 
 </body>
 </html>
