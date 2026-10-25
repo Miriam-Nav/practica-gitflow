@@ -63,21 +63,23 @@
 
     <!-- MENÚ -->
     <nav>
-      <div>Home</div>
-      <div>Modificar contenido<br>HTML</div>
-      <div>Modificar estilos CSS</div>
-      <div>Modificar atributos HTML</div>
+      <div onclick="mostrarSeccion('inicio')">Home</div>
+      <div onclick="mostrarSeccion('modificar-contenido')">Modificar contenido<br>HTML</div>
+      <div onclick="mostrarSeccion('modificar-estilos')">Modificar estilos CSS</div>
+      <div onclick="mostrarSeccion('modificar-atributos')">Modificar atributos HTML</div>
     </nav>
 
     <!-- CONTENIDO CENTRAL -->
     <main>
-      <h2>Bienvenido/a al curso de JavaScript</h2>
-      <p>En este curso aprenderemos cómo utilizar JavaScript aplicado a interacciones con elementos HTML. Veremos diferentes ejemplos prácticos para modificar el contenido, los estilos y los atributos de nuestra página web de manera dinámica.</p>
       
-      <hr>
+      <!-- SECCIÓN INICIO (Visible por defecto) -->
+      <section id="inicio" class="seccion-curso" style="display: block;">
+        <h2>Bienvenido/a al curso de JavaScript</h2>
+        <p>En este curso aprenderemos cómo utilizar JavaScript aplicado a interacciones con elementos HTML. Veremos diferentes ejemplos prácticos para modificar el contenido, los estilos y los atributos de nuestra página web de manera dinámica.</p>
+      </section>
 
       <!-- USUARIO 2: Modificar contenido HTML -->
-      <section id="modificar-contenido">
+      <section id="modificar-contenido" class="seccion-curso" style="display: none;">
         <h2>Modificar contenido HTML (Mejorado)</h2>
         <p>Ejemplo de cómo cambiar el contenido de un elemento usando JavaScript:</p>
         
@@ -90,9 +92,22 @@
         <p>Al hacer clic en el botón, el evento <code>onclick</code> busca el elemento con <code>id="demo"</code> usando <code>document.getElementById()</code> y reemplaza su contenido con <code>innerHTML</code>.</p>
       </section>
 
+      <!-- USUARIO 3: Modificar estilos CSS -->
+      <section id="modificar-estilos" class="seccion-curso" style="display: none;">
+        <h2>Modificar estilos CSS</h2>
+        <p>Ejemplo de cómo cambiar el estilo visual de un elemento usando JavaScript:</p>
+
+        <p id="texto-estilo">JavaScript puede cambiar el estilo de un elemento HTML.</p>
+        <button type="button" onclick="document.getElementById('texto-estilo').style.fontSize='35px'">
+          ¡Haz clic aquí!
+        </button>
+
+        <h3>Explicación del código:</h3>
+        <p>Al pulsar el botón, el evento <code>onclick</code> selecciona el párrafo mediante <code>document.getElementById()</code> y modifica su propiedad <code>style.fontSize</code> para aumentar el tamaño de la letra a 35px.</p>
+      </section>
+
       <!-- USUARIO 2: Modificar atributos HTML -->
-      <section id="modificar-atributos">
-        <hr>
+      <section id="modificar-atributos" class="seccion-curso" style="display: none;">
         <h2>Modificar atributos HTML</h2>
         <p>Ejemplo de cómo cambiar un atributo de un elemento usando JavaScript:</p>
 
@@ -106,21 +121,6 @@
         <p>Al hacer clic en el botón, se utiliza <code>document.getElementById()</code> para seleccionar el campo de texto y el método <code>setAttribute()</code> para modificar su atributo <code>value</code> dinámicamente.</p>
       </section>
 
-      <!-- USUARIO 3: Modificar estilos CSS -->
-      <section id="modificar-estilos">
-        <hr>
-        <h2>Modificar estilos CSS</h2>
-        <p>Ejemplo de cómo cambiar el estilo visual de un elemento usando JavaScript:</p>
-
-        <p id="texto-estilo">JavaScript puede cambiar el estilo de un elemento HTML.</p>
-        <button type="button" onclick="document.getElementById('texto-estilo').style.fontSize='35px'">
-          ¡Haz clic aquí!
-        </button>
-
-        <h3>Explicación del código:</h3>
-        <p>Al pulsar el botón, el evento <code>onclick</code> selecciona el párrafo mediante <code>document.getElementById()</code> y modifica su propiedad <code>style.fontSize</code> para aumentar el tamaño de la letra a 35px.</p>
-      </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -132,11 +132,11 @@
   <!-- SCRIPT DE PESTAÑAS -->
   <script>
     function mostrarSeccion(idSeccion) {
-      // 1. Oculta todas las secciones
+      // Oculta todas las secciones
       let secciones = document.querySelectorAll('.seccion-curso');
       secciones.forEach(sec => sec.style.display = 'none');
       
-      // 2. Muestra solo la sección clicada
+      // Muestra solo la sección clicada
       document.getElementById(idSeccion).style.display = 'block';
     }
   </script>
