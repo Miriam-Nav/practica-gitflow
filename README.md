@@ -69,8 +69,6 @@ L'usuari 3 crea la feature estilsCSS per a la seua secció i, una vegada integra
 
 ### Feature estilsCSS
 
-<!-- Captura pendent d'afegir (git flow feature start estilsCSS): ![git flow feature start estilsCSS](images/NOM.png) -->
-
 <img width="739" height="93" alt="captura-15" src="https://github.com/user-attachments/assets/cb60c840-339c-46d2-ad87-4828cfdff03b" />
 
 <img width="728" height="250" alt="captura-16" src="https://github.com/user-attachments/assets/8d6aff4a-b160-4b6c-98dd-57b911fd3558" />
